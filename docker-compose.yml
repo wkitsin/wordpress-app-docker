@@ -27,6 +27,10 @@ services:
      image: nginx
      depends_on:
        - wordpress
+     restart: always
+     build:
+       context: .
+       dockerfile: Dockerfile-nginx
      ports:
        - "80:8000"
 volumes:
