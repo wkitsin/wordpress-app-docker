@@ -23,15 +23,15 @@ services:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
-   web:
-     image: nginx
-     depends_on:
-       - wordpress
-     restart: always
-     build:
-       context: .
-       dockerfile: Dockerfile-nginx
-     ports:
-       - "80:8000"
+   # web:
+   #   image: nginx
+   #   depends_on:
+   #     - wordpress
+   #   restart: always
+   #   build:
+   #     context: .
+   #     dockerfile: Dockerfile-nginx
+   #   ports:
+   #     - "80:8000"
 volumes:
     dbdata:
